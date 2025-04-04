@@ -55,7 +55,7 @@ fetch("./php/fetch_polls.php")
     
                         <br>
     
-                        <span><button class="vote js-vote-${poll.poll_id}" data-poll-id="${poll.poll_id}" data-owner-id="${poll.owner_id}" data-has_voted="${poll.has_voted}">Vote</button></span>
+                        <span><button class="vote js-vote-${poll.poll_id}" data-poll-id="${poll.poll_id}" data-owner-id="${poll.owner_id}" data-has_voted="${poll.has_voted}">${poll.has_voted === 'true' ? 'Voted' : 'Vote'}</button></span>
                         <span><button class="result-btn  js-result-${poll.poll_id}"  data-poll-id="${poll.poll_id}">Show result <i class="fa-solid fa-chart-simple"></i></i></button></span>
                        </div>
 
@@ -75,7 +75,7 @@ fetch("./php/fetch_polls.php")
                        <div class="display-chart js-display-chart-${poll.poll_id}" style="display: none;">
                         <div class="chart-wrapper">
                             <div class="chart-container js-chart-container">
-                                <canvas id="pollChart-${poll.poll_id}" class="js-pollChart-${poll.poll_id}"></canvas>
+                                <canvas id="pollChart-${poll.poll_id}" class="js-pollChart-${poll.poll_id} pollChart"></canvas>
                             </div>
                             <div class="legend-container" id="legend-${poll.poll_id}"></div>
                         </div>
@@ -224,21 +224,6 @@ fetch("./php/fetch_polls.php")
         });
     });
     
-
-//     let pollContainer = document.getElementById("polls");
-
-//     // Generate HTML for each poll
-//     pollContainer.innerHTML = data.map(poll => `
-//         <div class="poll">
-//             <h2>${poll.title}</h2>
-//             <p>${poll.description}</p>
-//             <p><strong>Created by:</strong> ${poll.username} on ${poll.created_at}</p>
-//             <ul class="options">
-//                 ${poll.options.map(option => `<li>${option.option_text} - ${option.votes} votes</li>`).join("")}
-//             </ul>
-//         </div>
-//     `
-// ).join("");
 })
 .catch(error => console.log("Error fetching polls:", error));
 
@@ -277,17 +262,33 @@ function renderPollChart(poll) {
                 labels: labels,
                 datasets: [{
                     data: dataValues,
-                    backgroundColor: colors
+                    backgroundColor: colors,
+                    borderWidth: 0 
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false
+                maintainAspectRatio: false,
+                layout: {
+                    padding: 10 
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'right', 
+                        labels: {
+                            font: {
+                                size: 14 
+                            }
+                        }
+                    }
+                }
             }
         });
 
     }, 500);
 }
+
 
 
 // function renderPollChart(poll) {

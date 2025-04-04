@@ -1,7 +1,6 @@
 <?php
-phpinfo();
 $serverName = "quick-poll-app-cclab.database.windows.net"; 
-$database = "quick_poll";
+$database = "quickpoll";
 $username = "student";
 $password = "5*Admin2004";
 
@@ -18,7 +17,7 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 
 // Check connection
 if ($conn) {
-    //echo "Connection Successful!";
+    ///echo "Connection Successful!";
 } else {
     echo "Connection Failed: ";
     die(print_r(sqlsrv_errors(), true));

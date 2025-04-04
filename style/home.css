@@ -126,7 +126,10 @@ input[type="radio"] {
 
 
 
-
+.pollChart{
+    width: 400px !important;  /* Increase width */
+    height: 400px !important; 
+}
 
 
 /* image poll */
