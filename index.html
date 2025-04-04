@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="style/landing_page.css">
+    <!-- <script>
+        window.onload = function() {
+            if (sessionStorage.getItem("redirected")) return; 
+
+            fetch('php/auth_check.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "logged_in") {
+                    sessionStorage.setItem("redirected", "true"); 
+                    window.location.href = "home.html";
+                }
+            })
+            .catch(error => console.error("Error checking login status:", error));
+        };
+    </script> -->
+</head>
+<body>
+    <!-- <div class="main-con"> -->
+        <nav>
+            <div class="logo"><p>QuickPoll</p></div>
+            <div class="btns">
+                <a href="login_page.html"><button>Login</button></a>
+                <a href="registration.html"><button id="register-btn">Create account</button></a>
+            </div>
+        </nav>
+
+        <div class="main">
+            <div class="text-btn">
+                <h1 class="animate__animated animate__fadeInUp">Polling System</h1>
+                <p class="text-animation animate__animated animate__fadeInUp animate__delay-1s">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam tempore quaerat repellendus?
+                </p>
+                <a href="login_page.html"><button class="animate__animated animate__fadeInUp animate__delay-2s" >Get started</button></a>
+            </div>
+            <div class="image animate__animated animate__fadeInUp animate__delay-1s"></div>
+        </div>
+    
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

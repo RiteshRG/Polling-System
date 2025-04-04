@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPoll - Create a Poll</title>
+    <link rel="stylesheet" href="style/poll_creater.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create a Poll</h2>
+
+        <!-- Poll Type Selection -->
+        <label for="pollType">Select Poll Type:</label>
+        <select id="pollType" onchange="togglePollType()">
+            <option value="text">Text Poll</option>
+            <option value="image">Image Poll</option>
+        </select>
+
+        <!-- Poll Question -->
+        <input type="text" id="pollQuestion" placeholder="Enter your poll question..." required>
+
+        <!-- Text Poll Options -->
+        <div id="textOptionsContainer"></div>
+        <button id="addTextOptionBtn" onclick="addTextOption()">+ Add Text Option</button>
+
+        <!-- Image Poll Options -->
+        <div id="imageOptionsContainer" style="display: none;"></div>
+        <button id="addImageOptionBtn" onclick="addImageOption()" style="display: none;">+ Add Image Option</button>
+
+        <!-- Create Poll Button -->
+        <button class="createPollBtn" onclick="createPoll()">Create Poll</button>
+
+        <!-- Poll Preview -->
+        <div id="pollPreview" class="poll-preview">
+            <h3>Poll Preview</h3>
+            <p id="previewQuestion"></p>
+            <ul id="previewOptions"></ul>
+        </div>
+    </div>
+
+    <script src="scripts/poll.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+body {
+    font-family: 'Lexend Deca', sans-serif, serif;
+    background: linear-gradient(to right, #EFEBFD, #F6F4FF);
+    color: #372580;
+    padding-right: 70px;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
+/* main */
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.title-create-p{
+    color: #372580;
+}
+
+.poll-con{
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    min-width: 700px;
+    margin-top: 16px;
+    box-shadow: 0px 4px 10px #3725806e;
+}
+
+.poll-con form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.poll-con input, select , textarea{
+    font-size: 14px;
+    width: 100%;
+    padding: 7px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input:focus, #poll-type:focus, textarea:focus {
+    border-color: #372580;
+    box-shadow: 0 0 5px #7755fe;
+    outline: none;
+}
+
+#poll-type{
+    min-width: 40%;
+    max-width: 160px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="purple"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 30px;
+}
+
+#poll-type option {
+    background-color: #7755fe !important; 
+    color: white; 
+    padding: 5px;
+}
+
+
+.add-des-button{
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    font-size: 13px;
+    color: #37258080;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.add-des-button:hover{
+    color: #372580;
+}
+
+label span{
+    color: #3725805f;
+}
+
+/* textarea{
+    border-radius: 10px;
+} */
+
+/* Options */
+.main-option-con{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    flex-wrap: wrap;
+}
+
+
+.option-div input{
+    margin: 0px;
+    border: none;
+}
+
+.option-div{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.cancel-btn{
+    color: #37258071;
+    margin: 0px 10px 0px 10px;
+    border: none;
+    background-color: transparent;
+}
+
+
+
+.add-option-button{
+    padding: 8px 16px;
+    border: none;
+    background-color: #593f9c35;
+    text-align: left;
+    font-size: 14px;
+    color: #372580c9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: color 0.3s ease;
+}
+
+
+
+.min-option-msg{
+    display: none;
+    margin: 10px 0px 10px 10px;
+    font-size: 12px;
+    color: red;
+}
+
+hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.create-poll{
+    min-width: 106px;
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: #7755fe;
+    padding: 8px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.create-poll:hover{
+    background-color: #5a3f9c;
+}
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPoll | Create Poll</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/addPoll.css">
+    <link rel="stylesheet" href="style/image_poll.css">
+    <script src="https://kit.fontawesome.com/09d375ff12.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo"><p>QuickPoll</p>
+            <ul>
+                <li><a href="home.html" id="home" class="page">Home</a></li>
+                <li><a href="" id="add-poll" class="current-page">Create Poll</a></li>
+                <li><a href="profile.html" id="profile" class="page">Profile</a></li>
+            </ul>
+        </div>
+        <div class="btns">
+            <!-- <span>riteshgawde@gmail.com</span> -->
+            <span class="separator">|</span>
+            <a href="index.html"><button>Log out</button></a>
+            <!-- <button id="register-btn">Create account</button> -->
+        </div>
+    </nav>
+
+    <div class="main">
+        <h2 class="title-create-p text-animation animate__animated animate__fadeInUp animate__delay-0.5s">Create a Poll</h2>
+        <p class="sub-title text-animation animate__animated animate__fadeInUp animate__delay-0.5s">Complete the below fields to create your poll.</p>
+        <div class="poll-con text-animation animate__animated animate__fadeInUp animate__delay-0.8s" >
+            <form class="js-create-poll-form" action="">
+                <label for="">Title</label>
+                <input type="text" placeholder="Type Your question here" class="js-create-title" required>
+
+                <button class="add-des-button js-des-btn">
+                    <i class="fa-solid fa-plus"></i> Add Description
+                </button>
+
+                <div class="js-des-area hidden">
+                    <label for="">Description <span>(optional) </span></label>
+                    <textarea name="" id="" rows="4" class="js-des-textarea" class="js-create-des"></textarea>
+                </div>
+
+                <label for="">Options</label>
+
+                <div class="js-options  main-option-con">
+                </div>
+
+                <div class="options-container hiddenn" style="display: none;">
+                    <div class="add-option-card" id="add-option">
+                        <div class="add-icon"> <i class="fa-solid fa-plus"></i></div>
+                        <p>Add option</p>
+                    </div>
+                </div>
+
+                <p class="min-option-msg">Minimum 2 options are required!</p>
+
+                <span>
+                    <button class="add-option-button js-option-btn">
+                        <i class="fa-solid fa-plus"></i> Add option
+                    </button>
+                </span>
+                
+                <span><button class="create-poll" type="submit">Create poll</button></span>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/createPoll/validate_and_submit.js"></script>
+    <script src="./scripts/createPoll/createPollForm.js"></script>
+    <!-- <script src="./scripts/createPoll/createImagePoll.js"></script> -->
+</body>
+</html>

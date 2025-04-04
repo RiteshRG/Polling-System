@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPoll | Create Poll</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/addPoll.css">
+    <link rel="stylesheet" href="style/image_poll.css">
+    <script src="https://kit.fontawesome.com/09d375ff12.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo"><p>QuickPoll</p>
+            <ul>
+                <li><a href="home.html" id="home" class="page">Home</a></li>
+                <li><a href="" id="add-poll" class="current-page">Create Poll</a></li>
+                <li><a href="" id="profile" class="page">Profile</a></li>
+            </ul>
+        </div>
+        <div class="btns">
+            <span>riteshgawde@gmail.com</span>
+            <span class="separator">|</span>
+            <a href="index.html"><button>Log out</button></a>
+            <!-- <button id="register-btn">Create account</button> -->
+        </div>
+    </nav>
+
+    <div class="main">
+        <h2 class="title-create-p text-animation animate__animated animate__fadeInUp animate__delay-0.5s">Create a Poll</h2>
+        <p class="sub-title text-animation animate__animated animate__fadeInUp animate__delay-0.5s">Complete the below fields to create your poll.</p>
+        <div class="poll-con text-animation animate__animated animate__fadeInUp animate__delay-0.8s" >
+            <form class="js-create-poll-form" action="">
+                <label for="">Title</label>
+                <input type="text" placeholder="Type Your question here" class="js-create-title" required>
+
+                <button class="add-des-button js-des-btn">
+                    <i class="fa-solid fa-plus"></i> Add Description
+                </button>
+
+                <div class="js-des-area hidden">
+                    <label for="">Description <span>(optional) </span></label>
+                    <textarea name="" id="" rows="4" class="js-des-textarea" class="js-create-des"></textarea>
+                </div>
+
+                <!-- <label for="">Poll type</label>
+                <select name="" id="poll-type">
+                    <option value="text poll">Text Poll</option>
+                    <option value="image poll">Image Poll </option>
+                </select> -->
+
+                <label for="">Options</label>
+
+                <div class="js-options  main-option-con">
+                    <!-- <div class="option-div">
+                        <input type="text" placeholder="option 1" class="js-create-title">
+                        <button class="cancel-btn"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+
+                    <div class="option-div">
+                        <input type="text" placeholder="option 2">
+                         <button class="cancel-btn"><i class="fa-solid fa-xmark"></i></button>
+                     </div> -->
+                </div>
+
+                <div class="options-container hiddenn" style="display: none;">
+                    <div class="add-option-card" id="add-option">
+                        <div class="add-icon"> <i class="fa-solid fa-plus"></i></div>
+                        <p>Add option</p>
+                    </div>
+                </div>
+
+                <p class="min-option-msg">Minimum 2 options are required!</p>
+
+                <span>
+                    <button class="add-option-button js-option-btn">
+                        <i class="fa-solid fa-plus"></i> Add option
+                    </button>
+                </span>
+
+                <!-- <hr> -->
+
+                
+                <span><button class="create-poll" type="submit">Create poll</button></span>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/createPoll/createPollForm.js"></script>
+    <script src="./scripts/createPoll/createImagePoll.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="poll-con">
+                <form class="" action="">
+    
+                    <label class="title label">aaa</label>
+                    <br>
+                    <span class="desc-home">Lorem ipsum dolor sit amet consectetur adipisicinglore Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi impedit error</span>
+                    <br>
+                        <label class="name-time label">by a guest · 1 hour ago</label>
+                    <br><br>
+
+                    <div class="js-con1">
+                       <div class="dislay-poll">
+                        <label class="make-choice-lable label">Make a choice:</label>
+    
+                        <div class="radio-group">
+                            <label for="option1">
+                                <input type="radio" id="option1" name="option" value="option1">
+                                Option 1
+                            </label>
+                            <label for="option2">
+                                <input type="radio" id="option2" name="option" value="option2">
+                                Option 2 
+                            </label>
+                            <label for="option3">
+                                <input type="radio" id="option3" name="option" value="option3">
+                                Option 3
+                            </label>
+                        </div>
+    
+                        <br>
+    
+                        <span><button class="vote js-vote">Vote <i class="fa-solid fa-arrow-right"></i></button></span>
+                        <span><button class="result-btn  js-result">Show result <i class="fa-solid fa-chart-simple"></i></i></button></span>
+                       </div>
+
+
+                       <div class="result-poll" style="display: none;">
+                            <div class="text-poll-result-con">
+                                <div class="option">Option 1<span class="votes">  50% (86,046 votes)</span>
+                                    <div class="bar super-easy" style="width: 50.58%;"></div>
+                                </div>
+                                <div class="option">Option 2 <span class="votes">  20% (24,783 votes)</span>
+                                    <div class="bar very-difficult" style="width: 18.43%;"></div>
+                                </div>
+                                <div class="option">Option 3<span class="votes">  30% (22,659 votes)</span>
+                                    <div class="bar moderate" style="width: 14.11%;"></div>
+                                </div>
+                                <!-- <div class="option">Option 4<span class="votes">11.7% (18,792 votes)</span>
+                                    <div class="bar somewhat-easy" style="width: 11.7%;"></div>
+                                </div>
+                                <div class="option">Quite difficult <span class="votes">5.16% (8,287 votes)</span>
+                                    <div class="bar quite-difficult" style="width: 5.16%;"></div>
+                                </div> -->
+                            </div>
+                            <br>
+        
+                            <span><button class="back-btn"><i class="fa-solid fa-arrow-left"></i>  Back to poll</button></span>
+                            <span><button class="pie-chart-btn">Pie chart <i class="fa-solid fa-chart-pie"></i></button></span>
+                            <hr>
+                        <div class="vote-num">1,60,589 votes</div>
+                   </div>
+
+                   <div class="display-chart" style="display: none;">
+                    <div class="chart-wrapper">
+                        <div class="chart-container">
+                            <canvas id="pollChart"></canvas>
+                        </div>
+                        <div class="legend-container" id="legend"></div>
+                    </div>
+                    <br>
+                        <span><button class="back-btn"><i class="fa-solid fa-arrow-left"></i>  Back to poll</button></span>
+                        <hr>
+                        <div class="vote-num">1,60,589 votes</div>
+                   </div>
+
+                </div>
+            </form>
+        </div> 
+
+
+        <!-- <div class="poll-con">
+            <form action="">
+                <div class="text-result-form">
+                    <label class="title label">aaa</label>
+                    <br>
+                    <label class="name-time label">by a guest · 1 hour ago</label>
+                    <br><br>
+
+                    <label class="make-choice-lable label">Make a choice:</label>
+
+                    <br><br>
+
+                    <div class="options-grid">
+                        <label class="option">
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.QI29d315w9fABt0BQCsIwwHaE8&pid=Api&P=0&h=180" alt="Cricket bat and ball on grass" class="option-image">
+                            <div class="option-label">
+                                <input type="radio" name="image-poll" value="option1">
+                                <span>Option 1</span>
+                            </div>
+                        </label>
+                        
+                        <label class="option">
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.QI29d315w9fABt0BQCsIwwHaE8&pid=Api&P=0&h=180" alt="Red and white design" class="option-image">
+                            <div class="option-label">
+                                <input type="radio" name="image-poll" value="option2">
+                                <span>Option 2</span>
+                            </div>
+                        </label>
+                        
+                        <label class="option">
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.QI29d315w9fABt0BQCsIwwHaE8&pid=Api&P=0&h=180" alt="Mobile UI with profile" class="option-image">
+                            <div class="option-label">
+                                <input type="radio" name="image-poll" value="option3">
+                                <span>Option 3</span>
+                            </div>
+                        </label>
+                        
+                        <label class="option">
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.QI29d315w9fABt0BQCsIwwHaE8&pid=Api&P=0&h=180" alt="Indian food spread" class="option-image">
+                            <div class="option-label">
+                                <input type="radio" name="image-poll" value="option4">
+                                <span>Option 4</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <br>
+
+                    <span><button class="vote">Vote <i class="fa-solid fa-arrow-right"></i></button></span>
+                    <span><button class="result-btn">Show result <i class="fa-solid fa-chart-simple"></i></i></button></span>
+                </div>
+            </form>
+        </div> -->
+

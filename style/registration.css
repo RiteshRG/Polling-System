@@ -1,0 +1,167 @@
+body {
+    font-family: 'Lexend Deca', sans-serif, serif;
+    background: linear-gradient(to right, #EFEBFD, #F6F4FF);
+    color: #372580;
+    padding-right: 70px;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif, serif;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+    width: 100%;
+}
+
+
+.logo p{
+    font-family: 'Balsamiq Sans', sans-serif;
+    font-size: 25px;
+    font-weight:600;
+}
+
+.btns button{
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    font-weight:600;
+    padding: 3px 8px;
+    color: #372580;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btns button:hover {
+    /* border: 1px solid rgb(255, 255, 255); */
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    transform: scale(1.02); 
+}
+
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+/* .main-text{
+    font-family: 'Lexend Deca', sans-serif, serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #372580;
+    transition: all 0.3s ease;
+}
+
+
+.main-text:hover {
+    text-shadow: 0 0 10px #f3f3f3, 0 0 20px #c2b6f2, 0 0 30px #c2b6f2;
+    transform: scale(1.001); 
+} */
+
+
+
+.form-container {
+    font-family: 'Lexend Deca', sans-serif, serif;
+    background: white;
+    padding: 44px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: auto;
+    min-width: 450px;
+}
+
+.form-container form{
+    width: 100%;
+}
+
+.form-container h2 {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-container label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input, select {
+    font-size: 14px;
+    width: 100%;
+    padding: 7px 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form-container button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 9px 19px;
+    background-color: #7755fe;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #623bfa;
+}
+
+input:focus, select:focus {
+    border-color: #372580;
+    box-shadow: 0 0 5px #7755fe;
+    outline: none;
+}
+
+.form-container select {
+    font-size: 13px;
+    color: #7755fe;
+    appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="purple"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 30px;
+}
+
+.form-container p{
+    margin-top: 15px;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.form-container p a{
+    color: #7755fe;
+}
